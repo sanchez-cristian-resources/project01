@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+
+/* NAVBAR */
+@import url('./components/navbar.css'); 
+
+/* CARDS */
+@import url('./components/card.css'); 
+
 * {
     padding: 0px; 
     margin: 0px; 
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
-    color: red; 
 }
 
 :root {
@@ -17,162 +23,402 @@
     --neutral-dark: #292E47;
     --neutral-medium: #6B708D; 
     --neutral-light: #F2F4FC; 
-    --neutral-light-blue: #ECF7FF; 
+    --neutral-light-blue: #a7d5f6; 
     --secondary: #FFC600;  
+    --secondary-blue: #bfcbff;  
 }
 
 body {
     height: 100%;
     width: 100%;
     overflow-x: scroll;
+    background-color: var(--neutral-light);
 }
 
+/* ---------- FIRST SECTION ---------- */
 
-/* -------------- HEADER --------------- */
-
-header {
+#first-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     height: fit-content;
-    width: 100%; 
-    padding-top: 30px; 
-    padding-bottom: 10px; 
-    padding-inline: 5vw; 
-}
-
-a img {
-    height: 100%;
-    width: auto;
-}
-
-nav {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center; 
-    height: 70px;
     width: 100%;
+    padding-top: 90px;
+    padding-bottom: 30px; 
+    padding-inline: 7vw; 
 }
 
-ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100%;
-    width: fit-content;
+h1 {
+    margin-top: 100px; 
+    margin-bottom: 25px; 
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--neutral-dark);
 }
 
-li a {
-    text-decoration: unset;
-    padding-inline: 15px;
-    font-weight: 500;
+#first-section p {
+    margin-bottom: 50px; 
+    font-size: 1.3rem;
+    font-weight: 400;
     color: var(--neutral-medium)
 }
 
-.selected {
+/* links */
+
+#first-section div {
+    display: inline-block;
+}
+
+#first-section a:first-child { 
+    margin-right: 20px;
+    background-color: var(--primary);
+    color: #fff; 
+}
+
+#first-section a:first-child:hover {
+    background-color: transparent;
+    box-shadow: inset 0px 0px 0px 2px var(--primary);
     color: var(--primary)
 }
 
-header button {
+#first-section a {
     height: fit-content;
     width: fit-content;
-    padding-block: 15px; 
-    padding-inline: 20px; 
-    border: none;
-    background-color: var(--primary);
-    color: #fff; 
+    padding-block: 13px;  
+    padding-inline: 20px;
+    border: none; 
+    color: var(--neutral-medium); 
+    transition: all .2s ease-in-out;
+}
+
+#first-section a:hover {
+    cursor: pointer; 
+    background-color: var(--secondary-blue);
+    color: var(--neutral-dark)
+}
+
+#first-section img {
+    position: absolute;
+    top: 90px; 
+    right: 70px; 
+    height: auto;
+    width: 600px;
+    z-index: -1;
+}
+
+/* ---------- SECOND SECTION ---------- */
+
+#second-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding-inline: 7vw; 
+    margin-top: 250px; 
+    margin-bottom: 150px;
+}
+
+#second-section img {
+    height: auto;
+    width: 110px;
+    filter: grayscale(100%);
     transition: all .15s ease-in-out;
 }
 
-header button:hover {
-    background-color: var(--primary-hover);
-    cursor: pointer; 
+#second-section img:hover {
+    filter: grayscale(0%);
+    cursor: pointer;
 }
 
-/* -------------- MOBILE NAVBAR MENU --------------- */
+/* ---------- THIRD SECTION ---------- */
 
-#menu-button {
-    display: none;
+
+#third-section {
+    position: relative;
+    padding-inline: 7vw; 
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--neutral-dark); 
+    margin-bottom: 70px; 
+}
+
+#third-section .card img{
+    aspect-ratio: 13/9;
+    height: auto;
+    width: 100%;
+    pointer-events: none;
+}
+
+/* ---------- FOURTH SECTION ---------- */
+
+#fourth-section {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    padding-inline: 4vw; 
+    margin-bottom: 200px;
+}
+
+#quote-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    height: fit-content;
+    width: 100%;
+    background-color: var(--neutral-dark);
+    padding: 100px; 
+    background-image: url('../assets/testimonials/orbit.png');
+    background-position: center;
+    background-size: 100% auto;
+}
+
+#quote-container h3 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--neutral-light);  
+    margin-bottom: 100px;
+}
+
+#quote-container q {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--secondary);  
+    margin-bottom: 100px;
+}
+
+#profile-container {
+    display: inline-flex;
+    align-items: center;
     height: fit-content;
     width: fit-content;
 }
 
-#menu-button span {
-    display: block;
-    height: 4px;
-    width: 25px;
-    margin-bottom: 5px;
-    background-color: var(--primary);
-    border-radius: 1px;
+#profile-container img{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    margin-right: 10px;
 }
 
-#menu {
+#profile-container span {
+    display: block;
+}
+
+#profile-container span:nth-child(1) {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--neutral-light-blue);  
+}
+
+#profile-container span:nth-child(2) {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--neutral-light);  
+}
+
+/* MEMOJI'S PLACEMENT */
+
+/* 1:35 AM and nth-child is not working. I'm going to use a class for each img, im sorry */
+
+.memoji-one {
     position: absolute;
-    top: -100vh; 
-    bottom: 0px;
-    display: none;
+    height: 160px;
+    width: auto;
+    top: 50px; 
+    left: 50px; 
+}
+
+.memoji-two {
+    position: absolute;
+    height: 160px;
+    width: auto;
+    top: 50px; 
+    right: 50px; 
+}
+
+.memoji-three {
+    position: absolute;
+    height: 160px;
+    width: auto;
+    bottom: 50px; 
+    left: 50px; 
+}
+
+.memoji-four {
+    position: absolute;
+    height: 160px;
+    width: auto;
+    bottom: 50px; 
+    right: 50px; 
+}
+
+/* ---------- FIFTH SECTION ---------- */
+
+#fifth-section {
+    position: relative;
+    padding-inline: 7vw; 
+}
+
+.card .image-container {
+    position: relative;
+    margin-top: 30px; 
+    margin-left: 30px; 
+    padding: 15px;
+    height: 70px;
+    width: 70px;
+    background-color: var(--neutral-light-blue);
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+#fifth-section img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: auto;
+    align-self: center; 
+}
+
+/* ---------- SIXTH SECTION ---------- */
+
+#sixth-section {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    padding-inline: 4vw; 
+    margin-bottom: 150px;
+}
+
+#contact-container {
+    position: relative;
+    display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: flex-start;
     align-items: center; 
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(0, 0, 0, .5);
-    animation: menuAppear .3s ease-in-out forwards; 
+    height: fit-content;
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 120px; 
 }
 
-#menu span:first-child {
-    transform: rotate(-45deg);
+#contact-container h2{
+    font-size: 2rem;
+    color: var(--neutral-dark); 
+    margin-bottom: 30px; 
 }
 
-#menu span {
-    position: absolute;
-    top: 55px; 
-    right: 5vw;
-    display: block;
-    height: 4px;
-    width: 25px;
-    transform: rotate(45deg);
-    background-color: #fff;
-    border-radius: 1px;
+#contact-container p {
+    font-size: 1rem;
+    color: var(--neutral-dark); 
+    margin-bottom: 50px; 
 }
 
-#menu a {
-    height: fit-content; 
-    width: fit-content; 
-    padding-block: 10px; 
-    padding-inline: 40px; 
-    margin-block: 10px; 
-    font-size: 50px;
-    font-weight: 600;
-    text-align: left;
+#contact-container input {
+    height: 60px;
+    width: 350px;
+    padding: 20px;
+    padding-left: 60px; 
+    color: var(--neutral-dark); 
+    border: none; 
+    outline: none; 
+    background-image: url('../assets/icon/mail.svg');
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    margin-right: 10px; 
+    color: var(--neutral-dark); 
+    font-size: 1.1rem; 
+}
+
+#contact-container input:focus {
+    padding: 20px;
+    background-image: none; 
+}
+
+/* FIREFOX PLACEHOLDER */
+#contact-container input:focus::-moz-placeholder{
+    color: transparent
+} 
+
+/* CHROME - SAFARI PLACEHOLDER */
+#contact-container input:focus::-webkit-input-placeholder{ 
+    color: transparent
+} 
+
+#contact-container button {
+    all: unset; 
+    height: 60px;
+    width: fit-content;
+    padding-inline: 40px;
+    background-color: var(--primary);
     color: #fff; 
-    border-radius: 10px;
-    cursor: pointer;
+}
+
+#contact-container button:hover {
+    cursor: pointer; 
+}
+
+/* ---------- SEVENTH SECTION ---------- */
+
+#seventh-section {
+    position: relative;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    padding-inline: 10vw; 
+    margin-bottom: 50px;
+}
+
+#seventh-section div:first-child{
+    height: fit-content;
+    width: 100%;
+}
+
+#seventh-section img{
+    height: auto;
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+
+#seventh-section address{
+    all: unset; 
+    display: block;
+    font-size: 1rem;
+    color: var(--neutral-medium)
+}
+
+#seventh-section div:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100px;
+    width: 100%;
+}
+
+#seventh-section a{
+    height: fit-content;
+    width: fit-content;
     text-decoration: none;
+    font-size: 1rem;
+    color: var(--neutral-medium); 
+    transition: color .15s ease-in-out;
 }
 
-@keyframes menuAppear {
-    0% {
-        top: -100vh;   
-    }
-
-    100% {
-        top: 0px; 
-    }
-}
-
-/* -------------- HEADER QUERIES --------------- */
-
-@media (max-width: 600px) {
-    nav ul {
-        display: none;
-    }
-
-    header button {
-        display: none;
-    }
-
-    #menu-button {
-        display: block;
-    }
+#seventh-section a:hover{
+    cursor: pointer; 
+    color: var(--primary)
 }
