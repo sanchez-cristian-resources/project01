@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-
-/* COMPONENTS */
-@import url('./components/card.css'); 
-@import url('./components/footer.css'); 
-
 * {
     padding: 0px; 
     margin: 0px; 
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -78,11 +74,12 @@ li {
     text-decoration: unset;
     padding-inline: 15px;
     font-weight: 500;
-    color: var(--neutral-medium)
+    color: var(--neutral-medium);
 }
 
-.selected {
-    color: var(--primary)
+li:hover {
+    color: var(--primary); 
+    cursor: pointer;
 }
 
 header button {
@@ -93,7 +90,7 @@ header button {
     border: none;
     background-color: var(--primary);
     color: #fff; 
-    transition: all .15s ease-in-out;
+    transition: background-color .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
 }
 
 header button:hover {
