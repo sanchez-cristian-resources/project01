@@ -15,7 +15,6 @@ async function loadPage() {
 
     const view = document.querySelector('#view')
     const page = await fetchPage(path)
-
     view.innerHTML = page
 }
 
