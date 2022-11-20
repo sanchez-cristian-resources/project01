@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/home.css"/>
-    <title>Circle</title>
+    <meta id="description" name="description" content="Software development and ui design company">
+    <link id="style" rel="stylesheet" href="../css/pages/home.css"/>
+    <title>Circle: Design and Software development</title>
 </head>
 <body>
   <div id="menu">
@@ -13,10 +14,10 @@
       <span></span>
       <span></span>
     </div>
-    <a href="../html/index.html">Home</a>
-    <a href="../html/projects.html">Projects</a>
-    <a href="../html/services.html">Services</a>
-    <a href="../html/services.html">Contact us</a>
+    <a href="/home">Home</a>
+    <a href="/projects">Projects</a>
+    <a href="/services">Services</a>
+    <a href="/contact">Contact us</a>
   </div>
   <header id="root">
     <nav>
@@ -24,15 +25,9 @@
         <img src="../assets/logos/circle.svg"/>
       </a>
       <ul>
-        <li>
-          <a href="../html/index.html" class="selected">Home</a>
-        </li>
-        <li>
-          <a href="../html/projects.html">Projects</a>
-        </li>
-        <li>
-          <a href="../html/services.html">Services</a>
-        </li>
+        <li id="home">Home</li>
+        <li id="projects">Projects</li>
+        <li id="services">Services</li>
       </ul>
       <button>Contact us</button>
       <div id="menu-button">
@@ -41,11 +36,9 @@
       </div>
     </nav>
   </header>
-  <main>
-    <section id="first-section">
-
-    </section>
+  <main id="view">
+    <!-- ROUTER: HERE ALL THE PAGES WILL BE LOADED -->
   </main>
-  <script src="../js/home.js"></script>
+  <script type="module" src="./js/index.js"></script>
 </body>
 </html>
