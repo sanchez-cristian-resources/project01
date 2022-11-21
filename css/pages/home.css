@@ -40,29 +40,30 @@ h1 {
     display: inline-block;
 }
 
-#first-section a:first-child { 
+#first-section button:first-child { 
     margin-right: 20px;
     background-color: var(--primary);
     color: #fff; 
 }
 
-#first-section a:first-child:hover {
+#first-section button:first-child:hover {
     background-color: transparent;
     box-shadow: inset 0px 0px 0px 2px var(--primary);
     color: var(--primary)
 }
 
-#first-section a {
+#first-section button {
     height: fit-content;
     width: fit-content;
     padding-block: 13px;  
     padding-inline: 20px;
     border: none; 
     color: var(--neutral-medium); 
+    background-color: transparent;
     transition: all .2s ease-in-out;
 }
 
-#first-section a:hover {
+#first-section button:hover {
     cursor: pointer; 
     background-color: var(--secondary-blue);
     color: var(--neutral-dark)

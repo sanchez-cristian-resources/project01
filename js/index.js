@@ -1,7 +1,7 @@
 import { routes } from './data/routes.js'
 
 function getPath () {
-  const url = window.location.pathname
+  const url = window.location.pathname // + 'contact'
   let path = url.split('/').splice(1)
 
   if (String(path) === '') path = 'home'
@@ -58,11 +58,25 @@ function configurePage (route, path) {
   description.setAttribute('content', route.description)
 }
 
+window.addEventListener('load', () => {
+  // LOAD DEFAULT PAGE ( HOMEPAGE )
+  loadPage()
+
+  // NAVBAR BUTTON (MOBILE)
+  addNavbarListeners()
+})
+
 function addNavbarListeners () {
   // DESKTOP
+  const contact = document.querySelector('#contact')
   const home = document.querySelector('#home')
   const projects = document.querySelector('#projects')
   const services = document.querySelector('#services')
+
+  contact.addEventListener('click', () => {
+    window.history.pushState({}, '', './contact')
+    loadPage()
+  })
 
   home.addEventListener('click', () => {
     window.history.pushState({}, '', './')
@@ -96,11 +110,3 @@ function addNavbarListeners () {
     button.style.display = 'block'
   })
 }
-
-window.addEventListener('load', () => {
-  // LOAD DEFAULT PAGE ( HOMEPAGE )
-  loadPage()
-
-  // NAVBAR BUTTON (MOBILE)
-  addNavbarListeners()
-})
