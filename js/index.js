@@ -83,15 +83,20 @@ function addNavbarListeners () {
     loadPage()
   })
 
-  projects.addEventListener('click', () => {
+  /* projects.addEventListener('click', () => {
+    window.history.pushState({}, '', './#third-section')
+    loadPage()
     const position = document.querySelector('#third-section').offsetTop
     window.scrollTo(0, (position - 150))
   })
 
   services.addEventListener('click', () => {
+    window.history.pushState({}, '', './')
+    loadPage()
+    console.log('something')
     const position = document.querySelector('#fifth-section').offsetTop
     window.scrollTo(0, (position - 150))
-  })
+  }) */
 
   // MOBILE
   const button = document.querySelector('#menu-button')
