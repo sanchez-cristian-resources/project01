@@ -25,7 +25,7 @@
 body {
     height: 100%;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
     background-color: var(--neutral-light);
     padding-top: 90px;
 }
