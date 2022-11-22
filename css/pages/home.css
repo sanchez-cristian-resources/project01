@@ -78,6 +78,131 @@ h1 {
     z-index: -1;
 }
 
+/* FIRST CARD */
+
+#card-container {
+    position: absolute;
+    top: 13px;
+    right: 519px;
+    height: fit-content;
+    width: fit-content;
+    padding: 22px;
+    border-radius: 40px;
+    background-color: white;
+    transition: all .2s ease-in-out; 
+}
+
+#card-container  p:first-child {
+  font-size: .8rem;
+  color: #d8d8d8; 
+  margin-bottom: 5px; 
+}
+
+#card-container  p {
+  font-size: .8rem;
+  color: #292e47; 
+  margin-bottom: 15px; 
+  transition: all .2s ease-in-out; 
+}
+
+#card-container  > #credit-card {
+  display: flex;
+  flex-direction: column; 
+  height: fit-content;
+  width: 100%; 
+  padding: 20px; 
+  background-color: #072ac8; 
+  border-radius: 25px; 
+  margin-bottom: 15px;
+  transition: all .2s ease-in-out; 
+}
+
+#credit-card div:first-child {
+  display: flex; 
+  margin-bottom: 15px; 
+}
+
+#credit-card #left-circle {
+  height: 12px;
+  width: 12px; 
+  background-color: #eb001b; 
+  border-radius: 20px; 
+  opacity: .8; 
+  filter: brightness(200%)
+}
+
+#credit-card #right-circle {
+  height: 12px;
+  width: 12px; 
+  margin-left: -6px; 
+  background-color: #f79e1b; 
+  border-radius: 20px;
+}
+
+#bottom {
+  display: flex; 
+  align-items: center;  
+  justify-content: center;
+}
+
+#bottom > span{
+  margin-inline: 3px; 
+  color: #fff; 
+  opacity: .5; 
+  transition: all .2s ease-in-out; 
+}
+
+#bottom > span:nth-child(4){
+  color: #fff;
+  opacity: 1; 
+  font-weight: 400; 
+  font-size: .8rem; 
+}
+
+#dots {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center;
+}
+
+#dots > div:first-child{
+  background-color: #292e47; 
+}
+
+#dots > div{
+  background-color: #ececec; 
+  height: 7px;
+  width: 7px; 
+  border-radius: 10px; 
+  margin-inline: 2px; 
+  transition: all .2s ease-in-out; 
+}
+
+#card-container:hover {
+  background-color: #10184d; 
+}
+
+#card-container:hover p{
+  color: #fff;
+}
+
+#card-container:hover  p:first-child {
+    color: #323e8f;
+}
+
+#card-container:hover #credit-card{
+  background-color: #ebba50;
+}
+
+#card-container:hover #dots div:first-child{
+  background-color: #ebba50;
+}
+
+#card-container:hover #dots div{
+  background-color: #323e8f;
+}
+
+
 @media (max-width: 600px) {
     #first-section {
         align-items: center;
