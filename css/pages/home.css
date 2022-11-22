@@ -217,6 +217,10 @@ h1 {
     #first-section img {
         display: none;
     }
+
+    #card-container {
+        display: none;
+    }
 }
 
 /* ---------- SECOND SECTION ---------- */

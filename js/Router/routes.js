@@ -1,3 +1,4 @@
+import { fetchProjects } from '../Pages/home.js'
 const prefix = 'Circle: '
 
 export const routes = {
@@ -9,7 +10,10 @@ export const routes = {
         Circle is a digital design and development studio.
         We design and develop astonishing websites 
         and mobile apps.
-    `
+    `,
+    options: [
+      fetchProjects
+    ]
   },
   contact: {
     url: '../pages/contact.html',
@@ -18,7 +22,8 @@ export const routes = {
     description: `
         Circle is a digital design and development studio.
         Fill the form and in a short time we will be in contact with you.
-    `
+    `,
+    options: []
   },
   404: {
     url: '../pages/404.html',
@@ -28,6 +33,7 @@ export const routes = {
         Here in circle server, we don't have any result. You're 
         going to need more lucky the next time. 
         May the force be with you.
-    `
+    `,
+    options: []
   }
 }
