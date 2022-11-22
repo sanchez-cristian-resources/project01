@@ -20,6 +20,7 @@ class Router {
     const view = document.querySelector('#view')
     const page = await this.fetchPage(this.path)
     view.innerHTML = page
+    this.execOptions()
   }
 
   async fetchPage () {
@@ -58,6 +59,10 @@ class Router {
     // change title
     const description = document.querySelector('#description')
     description.setAttribute('content', this.route.description)
+  }
+
+  execOptions () {
+    this.route.options.map((option) => option())
   }
 
   // GETTERS AND SETTERS
