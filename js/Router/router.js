@@ -8,17 +8,16 @@ class Router {
 
   getCurrentPath () {
     const url = window.location.pathname
-    const formattedUrl = url.split('/').splice(1)
 
-    if (String(formattedUrl) === '') this.path = 'home'
-    else this.path = String(formattedUrl)
+    if (url !== '/') this.path = url
+    else this.path = '/'
   }
 
   async loadPage () {
-    this.getCurrentPath() //  if session storage has no saved path = first load, no reload
+    this.getCurrentPath()
 
     const view = document.querySelector('#view')
-    const page = await this.fetchPage(this.path)
+    const page = await this.fetchPage()
     view.innerHTML = page
     this.execOptions()
   }
@@ -41,7 +40,7 @@ class Router {
     this.configurePage()
 
     // fetch the route
-    const page = await fetch(this.route.url)
+    const page = await fetch(this.route.component)
       .then((page) => page.text()) // .text() returns a promise
 
     return page
