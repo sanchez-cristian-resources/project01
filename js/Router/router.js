@@ -1,4 +1,4 @@
-import { routes } from './data/routes.js'
+import { routes } from './routes.js'
 
 class Router {
   constructor () {

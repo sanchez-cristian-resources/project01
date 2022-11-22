@@ -72,7 +72,7 @@ h1 {
 #first-section img {
     position: absolute;
     top: 0px; 
-    right: 70px; 
+    right: 7vw; 
     height: auto;
     width: 600px;
     z-index: -1;
