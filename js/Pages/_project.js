@@ -14,7 +14,7 @@ export async function renderOtherProjects () {
   document.querySelector('h3').innerHTML = targetProject[0].description
   document.querySelector('#date').innerHTML = targetProject[0].completed_on
   document.querySelector('#content').innerHTML = targetProject[0].content
-  document.querySelector('#banner').setAttribute('src', projects[0].image)
+  document.querySelector('#banner').setAttribute('src', targetProject[0].image)
 
   let cards = ''
   for (let i = 0; i < 3; i++) {
