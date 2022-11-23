@@ -77,12 +77,11 @@ class Router {
     if( !routes[`/${this.segments[0]}`] ) return 
     if( this.segments.length <= 1 ) return 
     
-    console.log(routes[`/${this.segments[0]}`],this.segments[0] )
     const parentRoute = routes[`/${this.segments[0]}`]
     const requested = this.segments[1]
 
     for( let i = 0; i < parentRoute.childs.length; i++){
-      console.log(requested[i], parentRoute.childs[i][requested])
+      // if the nested route is not undefined
       if(parentRoute.childs[i][requested]) {
         //Access the property to return the property object
         this.route = parentRoute.childs[i][requested]

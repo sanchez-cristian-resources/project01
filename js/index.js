@@ -19,17 +19,17 @@ import Router from './Router/router.js'
     const services = document.querySelector('#services')
 
     contact.addEventListener('click', () => {
-      window.history.pushState({}, '', './contact')
+      window.history.pushState({}, '', '/contact')
       router.loadPage()
     })
 
     home.addEventListener('click', async () => {
-      window.history.pushState({}, '', './')
+      window.history.pushState({}, '', '/')
       router.loadPage()
     })
 
     projects.addEventListener('click', () => {
-      window.history.pushState({}, '', './')
+      window.history.pushState({}, '', '/')
       router.loadPage()
 
       const position = document.querySelector('#third-section').offsetTop
@@ -37,7 +37,7 @@ import Router from './Router/router.js'
     })
 
     services.addEventListener('click', () => {
-      window.history.pushState({}, '', './')
+      window.history.pushState({}, '', '/')
       router.loadPage()
 
       const position = document.querySelector('#fifth-section').offsetTop
