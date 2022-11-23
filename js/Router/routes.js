@@ -13,7 +13,8 @@ export const routes = {
     `,
     options: [
       fetchProjects
-    ]
+    ],
+    childs: []
   },
   '/projects': {
     component: '../pages/contact.html',
@@ -24,9 +25,9 @@ export const routes = {
       Fill the form and in a short time we will be in contact with you.
     `,
     options: [],
-    chidls: [ // this will be modified in the future
+    childs: [ // this will be modified in the future
       {
-        '/projects/::project': {
+        'simplify': {
           component: '../pages/contact.html',
           style: '../css/pages/contact.css',
           title: `${prefix}Contact with us`,
@@ -35,7 +36,46 @@ export const routes = {
             Fill the form and in a short time we will be in contact with you.
           `,
           options: [],
-          chidls: []
+          childs: []
+        }
+      }, 
+      {
+        'vectorify': {
+          component: '../pages/contact.html',
+          style: '../css/pages/contact.css',
+          title: `${prefix}Contact with us`,
+          description: `
+            Circle is a digital design and development studio.
+            Fill the form and in a short time we will be in contact with you.
+          `,
+          options: [],
+          childs: []
+        }
+      }, 
+      {
+        'lorem-ipsum': {
+          component: '../pages/contact.html',
+          style: '../css/pages/contact.css',
+          title: `${prefix}Contact with us`,
+          description: `
+            Circle is a digital design and development studio.
+            Fill the form and in a short time we will be in contact with you.
+          `,
+          options: [],
+          childs: []
+        }
+      }, 
+      {
+        'dashcoin': {
+          component: '../pages/contact.html',
+          style: '../css/pages/contact.css',
+          title: `${prefix}Contact with us`,
+          description: `
+            Circle is a digital design and development studio.
+            Fill the form and in a short time we will be in contact with you.
+          `,
+          options: [],
+          childs: []
         }
       }
     ]
@@ -48,7 +88,8 @@ export const routes = {
         Circle is a digital design and development studio.
         Fill the form and in a short time we will be in contact with you.
     `,
-    options: []
+    options: [],
+    childs: []
   },
   '/404': {
     component: '../pages/404.html',
@@ -59,6 +100,7 @@ export const routes = {
         going to need more lucky the next time. 
         May the force be with you.
     `,
-    options: []
+    options: [],
+    childs: []
   }
 }

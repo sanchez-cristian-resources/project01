@@ -24,7 +24,8 @@ export async function fetchProjects () {
   // order the projects by the milliseconds
   const oProjects = datedProjects.sort((a, b) => b.milliseconds - a.milliseconds)
 
-  console.log(oProjects)
+  setProjects(oProjects)
+  console.log(projects())
 
   let cards = ''
   for (let i = 0; i < 3; i++) {
@@ -43,7 +44,7 @@ export async function fetchProjects () {
   document.querySelector('#cards-container').innerHTML = cards
   for (let i = 0; i < 3; i++) {
     document.querySelector(`#${oProjects[i].id}`).addEventListener('click', (e) => {
-      window.history.pushState({}, '', `./projects/${oProjects[i].id}`)
+      window.history.pushState({}, '', `/projects/${oProjects[i].id}`)
       router.loadPage()
     })
   }
