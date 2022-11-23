@@ -1,5 +1,6 @@
 import { renderProjects } from '../Pages/home.js'
 import { renderOtherProjects } from '../Pages/_project.js'
+import { renderAllProjects } from '../Pages/projects.js'
 
 const prefix = 'Circle: '
 const sufix = 'Circle '
@@ -20,14 +21,16 @@ export const routes = {
     childs: []
   },
   '/projects': {
-    component: '../pages/contact.html',
-    style: '../css/pages/contact.css',
+    component: '../pages/projects.html',
+    style: '../css/pages/projects.css',
     title: `${prefix}Contact with us`,
     description: `
       Circle is a digital design and development studio.
       Fill the form and in a short time we will be in contact with you.
     `,
-    options: [],
+    options: [
+      renderAllProjects
+    ],
     childs: [ // this will be modified in the future
       {
         simplify: {

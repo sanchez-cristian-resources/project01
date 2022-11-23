@@ -29,16 +29,13 @@ import Router from './Router/router.js'
     })
 
     projects.addEventListener('click', () => {
-      window.history.pushState({}, '', '/')
+      window.history.pushState({}, '', '/projects')
       router.loadPage()
-
-      const position = document.querySelector('#third-section').offsetTop
-      window.scrollTo(0, (position - 150))
     })
 
     services.addEventListener('click', () => {
       window.history.pushState({}, '', '/')
-      router.loadPage()
+      router.loadPage(false)
 
       const position = document.querySelector('#fifth-section').offsetTop
       window.scrollTo(0, (position - 150))
