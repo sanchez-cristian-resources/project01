@@ -50,14 +50,17 @@ h1 {
     margin-bottom: 100px; 
 }
 
-#blog-content > div:first-child {
-    height: 400px;
-    background-color: var(--neutral-light-blue);
-    opacity: .2;
+#banner {
+    aspect-ratio: 20/9;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    margin-bottom: 35px;
 }
 
-#blog-content > p {
-    font-size: 1rem;
+#content {
+    text-align: justify;
+    font-size: 1.05rem;
     font-weight: 400;
     color: var(--neutral-medium); 
 }
@@ -75,11 +78,18 @@ h1 {
     margin-bottom: 70px;   
 }
 
+.card img{
+    aspect-ratio: 13/9;
+    height: auto;
+    width: 100%;
+    pointer-events: none;
+}
+
 
 /* ---------- CONTACT SECTION --------- */
 #contact-section {
     margin-inline: 4vw;
-    margin-block: 140px;
+    margin-bottom: 140px;
 }
 
 

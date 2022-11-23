@@ -1,7 +1,7 @@
 import Router from '../Router/router.js'
 import { fetchProjects } from '../APIs/fetchProjects.js'
 
-export async function getProjects () {
+export async function renderProjects () {
   const router = new Router()
   const projects = await fetchProjects()
 
