@@ -15,8 +15,8 @@ class Router {
   }
 
   getSegments () {
-    const segments = this.path.split('/').splice(1) 
-    this.segments = segments 
+    const segments = this.path.split('/').splice(1)
+    this.segments = segments
   }
 
   async loadPage () {
@@ -26,6 +26,9 @@ class Router {
     const view = document.querySelector('#view')
     const page = await this.fetchPage()
     view.innerHTML = page
+    // Set all meta-elements: css, searchbar, title & description
+    this.configurePage()
+    // Execute current page specials method at startup
     this.execOptions()
   }
 
@@ -37,15 +40,12 @@ class Router {
       if (validRoute === this.path) this.route = routes[this.path]
     }
 
-    //check if the route has childs before throwing 404 page
+    // check if the route has childs before throwing 404 page
     if (!this.route && !this.hasChild()) {
       this.route = routes['/404']
       const header = document.querySelector('header')
       header.style.display = 'none'
     }
-
-    // Set all meta-elements: css, searchbar, title & description
-    this.configurePage()
 
     // fetch the route
     const page = await fetch(this.route.component)
@@ -72,18 +72,18 @@ class Router {
     this.route.options.map((option) => option())
   }
 
-  hasChild() {
+  hasChild () {
     // if the first segment route exists continue
-    if( !routes[`/${this.segments[0]}`] ) return 
-    if( this.segments.length <= 1 ) return 
-    
+    if (!routes[`/${this.segments[0]}`]) return
+    if (this.segments.length <= 1) return
+
     const parentRoute = routes[`/${this.segments[0]}`]
     const requested = this.segments[1]
 
-    for( let i = 0; i < parentRoute.childs.length; i++){
+    for (let i = 0; i < parentRoute.childs.length; i++) {
       // if the nested route is not undefined
-      if(parentRoute.childs[i][requested]) {
-        //Access the property to return the property object
+      if (parentRoute.childs[i][requested]) {
+        // Access the property to return the property object
         this.route = parentRoute.childs[i][requested]
         return true
       }

@@ -1,5 +1,6 @@
-import { fetchProjects } from '../Pages/home.js'
+import { getProjects } from '../Pages/home.js'
 const prefix = 'Circle: '
+const sufix = 'Circle '
 
 export const routes = {
   '/': {
@@ -12,7 +13,7 @@ export const routes = {
       and mobile apps.
     `,
     options: [
-      fetchProjects
+      getProjects
     ],
     childs: []
   },
@@ -27,10 +28,10 @@ export const routes = {
     options: [],
     childs: [ // this will be modified in the future
       {
-        'simplify': {
-          component: '../pages/contact.html',
-          style: '../css/pages/contact.css',
-          title: `${prefix}Contact with us`,
+        simplify: {
+          component: '../pages/_project.html',
+          style: '../css/pages/_project.css',
+          title: `Simplify - ${sufix}`,
           description: `
             Circle is a digital design and development studio.
             Fill the form and in a short time we will be in contact with you.
@@ -38,12 +39,12 @@ export const routes = {
           options: [],
           childs: []
         }
-      }, 
+      },
       {
-        'vectorify': {
-          component: '../pages/contact.html',
-          style: '../css/pages/contact.css',
-          title: `${prefix}Contact with us`,
+        vectorify: {
+          component: '../pages/_project.html',
+          style: '../css/pages/_project.css',
+          title: `Vectorifys - ${sufix}`,
           description: `
             Circle is a digital design and development studio.
             Fill the form and in a short time we will be in contact with you.
@@ -51,12 +52,12 @@ export const routes = {
           options: [],
           childs: []
         }
-      }, 
+      },
       {
         'lorem-ipsum': {
-          component: '../pages/contact.html',
-          style: '../css/pages/contact.css',
-          title: `${prefix}Contact with us`,
+          component: '../pages/_project.html',
+          style: '../css/pages/_project.css',
+          title: `Lorem-Ipsum - ${sufix}`,
           description: `
             Circle is a digital design and development studio.
             Fill the form and in a short time we will be in contact with you.
@@ -64,12 +65,12 @@ export const routes = {
           options: [],
           childs: []
         }
-      }, 
+      },
       {
-        'dashcoin': {
-          component: '../pages/contact.html',
-          style: '../css/pages/contact.css',
-          title: `${prefix}Contact with us`,
+        dashcoin: {
+          component: '../pages/_project.html',
+          style: '../css/pages/_project.css',
+          title: `Dashcoin - ${sufix}`,
           description: `
             Circle is a digital design and development studio.
             Fill the form and in a short time we will be in contact with you.
