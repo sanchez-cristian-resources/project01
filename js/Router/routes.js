@@ -1,4 +1,6 @@
-import { getProjects } from '../Pages/home.js'
+import { renderProjects } from '../Pages/home.js'
+import { renderOtherProjects } from '../Pages/_project.js'
+
 const prefix = 'Circle: '
 const sufix = 'Circle '
 
@@ -13,7 +15,7 @@ export const routes = {
       and mobile apps.
     `,
     options: [
-      getProjects
+      renderProjects
     ],
     childs: []
   },
@@ -36,7 +38,9 @@ export const routes = {
             Circle is a digital design and development studio.
             Fill the form and in a short time we will be in contact with you.
           `,
-          options: [],
+          options: [
+            renderOtherProjects
+          ],
           childs: []
         }
       },
@@ -49,7 +53,9 @@ export const routes = {
             Circle is a digital design and development studio.
             Fill the form and in a short time we will be in contact with you.
           `,
-          options: [],
+          options: [
+            renderOtherProjects
+          ],
           childs: []
         }
       },
@@ -62,7 +68,9 @@ export const routes = {
             Circle is a digital design and development studio.
             Fill the form and in a short time we will be in contact with you.
           `,
-          options: [],
+          options: [
+            renderOtherProjects
+          ],
           childs: []
         }
       },
@@ -75,7 +83,9 @@ export const routes = {
             Circle is a digital design and development studio.
             Fill the form and in a short time we will be in contact with you.
           `,
-          options: [],
+          options: [
+            renderOtherProjects
+          ],
           childs: []
         }
       }
