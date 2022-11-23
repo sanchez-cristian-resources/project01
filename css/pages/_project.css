@@ -1,0 +1,85 @@
+/* EXTENDS */
+@import url('../style.css'); 
+
+/* COMPONENTS */
+@import url('../components/card.css'); 
+@import url('../components/contactBlock.css'); 
+@import url('../components/footer.css'); 
+
+/* ---------- BLOG HEADER --------- */
+
+#blog-header {
+    padding-block: 70px 0px; 
+    margin-inline: 7vw;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--neutral-dark); 
+}
+
+#subtitle {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px; 
+}
+
+#subtitle h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--neutral-medium); 
+}
+
+#subtitle p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--neutral-dark); 
+}
+
+#subtitle span {
+    color: var(--neutral-medium); 
+}
+
+/* ---------- BLOG CONTENT --------- */
+
+#blog-content {
+    height: fit-content;
+    margin-inline: 7vw;
+    margin-bottom: 100px; 
+}
+
+#blog-content > div:first-child {
+    height: 400px;
+    background-color: var(--neutral-light-blue);
+    opacity: .2;
+}
+
+#blog-content > p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--neutral-medium); 
+}
+
+/* ---------- CARDS SECTION --------- */
+
+#cards-section{
+    position: relative;
+    padding-inline: 7vw; 
+}
+
+#cards-section h2{
+    font-size: 2rem;
+    color: var(--neutral-dark); 
+    margin-bottom: 70px;   
+}
+
+
+/* ---------- CONTACT SECTION --------- */
+#contact-section {
+    margin-inline: 4vw;
+    margin-block: 140px;
+}
+
+
