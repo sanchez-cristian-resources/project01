@@ -1,6 +1,7 @@
 import { renderProjects } from '../Pages/home.js'
 import { renderOtherProjects } from '../Pages/_project.js'
 import { selectRandomProject } from '../Pages/projects.js'
+import { formValidation } from '../Pages/contact.js'
 
 const prefix = 'Circle: '
 const sufix = 'Circle '
@@ -102,7 +103,9 @@ export const routes = {
         Circle is a digital design and development studio.
         Fill the form and in a short time we will be in contact with you.
     `,
-    options: [],
+    options: [
+      formValidation
+    ],
     childs: []
   },
   '/404': {
