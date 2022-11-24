@@ -9,7 +9,7 @@ export async function renderAllProjects () {
   for (let i = 0; i < projects.length; i++) {
     cards += `
         <div id="${projects[i].id}" class="card">
-          <img loading="eager" src="${projects[i].image}" alt="project-image">
+          <img loading="eager" src="${projects[i].image}" alt="">
           <div class="text-container">
             <p class="title">${projects[i].name}</p>
             <p class="description">${projects[i].description}</p>
