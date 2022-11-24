@@ -19,19 +19,24 @@ class Router {
     this.segments = segments
   }
 
-  async loadPage (scroll = true) {
+  async loadPage () {
     this.getCurrentPath()
     this.getSegments()
 
     const view = document.querySelector('#view')
+    view.style.display = 'none' // Avoid flickering
+
     const page = await this.fetchPage()
-    view.innerHTML = page
-    if (scroll) window.scrollTo(0, 0)
 
     // Set all meta-elements: css, searchbar, title & description
     this.configurePage()
+
+    view.innerHTML = page
+
     // Execute current page specials method at startup
     this.execOptions()
+
+    view.style.display = '' // Avoid flickering
   }
 
   async fetchPage () {

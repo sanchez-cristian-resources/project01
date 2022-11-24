@@ -1,6 +1,3 @@
-/* EXTENDS */
-@import url('../style.css'); 
-
 * {
     border: none; 
     outline: none; 
@@ -59,7 +56,7 @@ fieldset {
     grid-row: 3; 
 }
 
-button {
+#submit-button {
     grid-column: 1 / span 2;
     grid-row: 4; 
     height: 70px;
@@ -70,7 +67,7 @@ button {
     transition: scale .15s ease-in-out;
 }
 
-button:hover {
+#submit-button:hover {
     scale: .98;
     cursor: pointer; 
 }

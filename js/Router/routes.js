@@ -1,6 +1,6 @@
 import { renderProjects } from '../Pages/home.js'
 import { renderOtherProjects } from '../Pages/_project.js'
-import { renderAllProjects } from '../Pages/projects.js'
+import { selectRandomProject } from '../Pages/projects.js'
 
 const prefix = 'Circle: '
 const sufix = 'Circle '
@@ -29,7 +29,7 @@ export const routes = {
       Fill the form and in a short time we will be in contact with you.
     `,
     options: [
-      renderAllProjects
+      selectRandomProject
     ],
     childs: [ // this will be modified in the future
       {
