@@ -7,8 +7,7 @@ On this repo we're going to create a fictional company called "Circle" and we're
 
 Our page will be a SPA (Single Page Application) that will be built using vanilla JavaScript, HTML and CSS. 
 
-### Project Wireframes
-<iframe src="https://miro.com/app/live-embed/uXjVPAbx5cU=/?moveToViewport=-1921,-1697,5759,2464&embedId=416097099989" scrolling="no" allowfullscreen width="100%" height="500px" frameborder="0"></iframe>
+### Project [Wireframes](https://miro.com/app/live-embed/uXjVPAbx5cU=/?moveToViewport=-1921,-1697,5759,2464&embedId=416097099989)
 
 ### Setup
 
