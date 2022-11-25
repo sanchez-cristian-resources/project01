@@ -2,6 +2,7 @@ import { renderProjects } from '../Pages/home.js'
 import { renderOtherProjects } from '../Pages/_project.js'
 import { selectRandomProject } from '../Pages/projects.js'
 import { formValidation } from '../Pages/contact.js'
+import { goBack } from '../Pages/404.js'
 
 const prefix = 'Circle: '
 const sufix = 'Circle '
@@ -110,14 +111,16 @@ export const routes = {
   },
   '/404': {
     component: '../pages/404.html',
-    style: '../css/pages/home.css',
+    style: '../css/pages/404.css',
     title: `${prefix}404 Page not found`,
     description: `
         Here in circle server, we don't have any result. You're 
         going to need more lucky the next time. 
         May the force be with you.
     `,
-    options: [],
+    options: [
+        goBack
+    ],
     childs: []
   }
 }

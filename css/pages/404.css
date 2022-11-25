@@ -1,0 +1,46 @@
+body {
+    padding: 0px; 
+    height: 100vh;
+    width: 100vw;
+}
+
+section {
+    position: relative;
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#goBackButton {
+    position: absolute;
+    top: 50px; 
+    left: 50px; 
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px; 
+    font-size: 1.1rem;
+    color: var(--primary); 
+    outline: 0px; 
+    border: none; 
+    border-radius: 10px;
+    background-color: var(--neutral-light);
+    transition: box-shadow .15s ease-in-out; 
+}
+
+#goBackButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+
+h1 {
+    font-size: 15rem;
+    color: var(--primary)
+}
+
+h2 {
+    font-size: 8rem;
+    color: var(--primary) 
+}
