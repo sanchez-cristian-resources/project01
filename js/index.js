@@ -34,11 +34,11 @@ import Router from './Router/router.js'
     })
 
     services.addEventListener('click', () => {
-      window.history.pushState({}, '', '/')
-      router.loadPage(false)
-
-      const position = document.querySelector('#fifth-section').offsetTop
-      window.scrollTo(0, (position - 150))
+        /* window.history.pushState({}, '', '/')
+        router.loadPage(false) */
+  
+        const position = document.querySelector('#fifth-section').offsetTop
+        window.scrollTo(0, (position - 150))
     })
 
     // MOBILE

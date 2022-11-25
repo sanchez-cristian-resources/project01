@@ -67,7 +67,7 @@ h1 {
     color: var(--neutral-dark)
 }
 
-#first-section img {
+#first-section #hero {
     position: absolute;
     top: 0px; 
     right: 7vw; 
@@ -200,6 +200,16 @@ h1 {
   background-color: #323e8f;
 }
 
+/* CARD 2 */
+
+#card-2 {
+    position: absolute;
+    top: 510px; 
+    right: 120px; 
+    width: 350px;
+    height: auto;
+    z-index: 10;
+}
 
 @media (max-width: 600px) {
     #first-section {
